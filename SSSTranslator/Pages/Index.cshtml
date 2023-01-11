@@ -1,0 +1,31 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1> SSS Encrypter </h1>
+
+    <div class="container bg-light border-3 p-4 align-content-center">
+        
+        <form method="POST">
+
+            <div class="form-group mb-4">
+                <label>Encrypt: </label>
+                <textarea type="text" class ="form-control mb-3" id="encrypt-sentence" rows="4" name="input" placeholder="Input words here..."></textarea>
+                <button type="submit" class="btn btn-primary mb-3">Encrypt</button>
+            </div>
+
+        </form>
+
+        <br>
+
+        <div class="form-group">
+            <label>Output: </label>
+            <textarea type="text" class="form-control" id="result-sentence" rows="4" cols="50" readonly name="result">@Model.encryptions.results</textarea>
+        </div>
+
+    </div>
+
+</div>
